@@ -5,13 +5,19 @@ import time
 
 #Set the IP address and port of the machine running this script
 # in the EM_HDLC web interface system tab command IP/port.
+
+#IP Address the EM_HDLC
 EM_HDLC_IP = "192.168.1.124"
 EM_HDLC_PORT = 10001
 
+#Refer to EM_HDLC EMH_BIU Firmware User Manual for a description of commands
 DISCOVER = b'LXBIU\x01\x01\x00'
 # Sets timeout to five seconds
 SET_TIMEOUT = b'LXBIU\x01\x02\x01\x05'
+# Enables BIU 1
 ENABLE_MASK = b'LXBIU\x01\x03\x01\x01'
+
+#String containing EM_HDLC command and TS2 Type 148 Responce. Refer to Nema TS2 (2003) page 3-25
 UPDATE_BIU1_CALL_DATA = b'LXBIU\x01\x0a\x27\x08\x83\x94\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
 
 print("EM HDLC IP: %s" % EM_HDLC_IP)

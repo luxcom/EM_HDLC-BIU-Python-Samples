@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-#Displays all SDLC data forwarded from the EM_HDLC
-
+# Displays all SDLC data forwarded from the EM_HDLC
+# Refer to Table 3.1 from NEMA TS2 Traffic Controller Assemblies with NTCIP Requirements
 import socket
 
 #Set forward IP and port in EM_HDLC web interface
